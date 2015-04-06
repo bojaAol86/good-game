@@ -1,0 +1,76 @@
+<div class="jumbotron">
+  <h1>Latest NBA scores</h1>
+
+  <p class="lead">
+    Everything you need to watch the best game from last night
+  </p>
+</div>
+<div class="marketing">
+    <div class="date-header">Today</div>
+    <div class="scoresContainer" ng-repeat="result in todayScores | orderBy:'-WasItAGoodGame'">
+        <table>
+          <tr>
+            <td>
+              <div>
+                <img class="team-logo" ng-src="{{result.HomeTeam.LogoUrl}}"/>
+              </div>
+            </td>
+            <td class="vs">VS</td>
+            <td>
+              <div>
+                <img class="team-logo" ng-src="{{result.AwayTeam.LogoUrl}}"/>
+              </div>
+            </td>
+            <td>
+              <ul ng-show="result.Score != 'unfinished'" class="creatures" id="creatures">
+                <li>
+                  <div class="click-anim">
+                    <figure ng-class="{hyper: result.WasItAGoodGame, nervous: !result.WasItAGoodGame}">
+                      <div class="eye"></div>
+                      <div class="eye"></div>
+                      <div class="mouth "></div>
+                    </figure>
+                  </div>
+                  <div class="shadow"></div>
+                </li>
+              </ul>
+              <span ng-show="result.Score == 'unfinished'" class="vs">?</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    <div class="date-header">Yesterday</div>
+    <div class="scoresContainer" ng-repeat="result in yesterdayScores | orderBy:'-WasItAGoodGame'">
+    <table>
+      <tr>
+        <td>
+          <div>
+            <img class="team-logo" ng-src="{{result.HomeTeam.LogoUrl}}"/>
+          </div>
+        </td>
+        <td class="vs">VS</td>
+        <td>
+          <div>
+            <img class="team-logo" ng-src="{{result.AwayTeam.LogoUrl}}"/>
+          </div>
+        </td>
+        <td>
+          <ul class="creatures" ng-show="result.Score != 'unfinished'" id="creatures2">
+            <li>
+              <div class="click-anim">
+                <figure ng-class="{hyper: result.WasItAGoodGame, nervous: !result.WasItAGoodGame}">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                  <div class="mouth "></div>
+                </figure>
+              </div>
+              <div class="shadow"></div>
+            </li>
+          </ul>
+          <span ng-show="result.Score == 'unfinished'" class="vs">?</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
