@@ -33,13 +33,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>com.github.jsimone</groupId>-->
-            <!--<artifactId>webapp-runner</artifactId>-->
-            <!--<version>7.0.22</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
@@ -130,20 +123,19 @@
                     <warName>${project.artifactId}</warName>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-dependency-plugin</artifactId>-->
-                <!--<version>2.4</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<phase>package</phase>-->
-                        <!--<goals><goal>copy-dependencies</goal></goals>-->
-                        <!--<configuration>-->
-                            <!--<includeArtifactIds>webapp-runner</includeArtifactIds>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>pl.allegro</groupId>
+                <artifactId>grunt-maven-plugin</artifactId>
+                <version>1.4.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>npm</goal>
+                            <goal>grunt</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
