@@ -123,19 +123,26 @@
                     <warName>${project.artifactId}</warName>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>pl.allegro</groupId>
-                <artifactId>grunt-maven-plugin</artifactId>
-                <version>1.4.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>npm</goal>
-                            <goal>grunt</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>pl.allegro</groupId>-->
+                <!--<artifactId>grunt-maven-plugin</artifactId>-->
+                <!--<version>1.4.1</version>-->
+                <!--<configuration>-->
+                    <!--<bowerExecutable>node_modules/bower/bin/bower</bowerExecutable>-->
+                    <!--<gruntExecutable>node_modules/grunt-cli/bin/grunt</gruntExecutable>-->
+                    <!--<runGruntWithNode>true</runGruntWithNode>-->
+                    <!--<jsSourceDirectory>static</jsSourceDirectory>-->
+                    <!--<gruntBuildDirectory>${project.basedir}</gruntBuildDirectory>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>npm</goal>-->
+                            <!--<goal>grunt</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

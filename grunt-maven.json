@@ -1,0 +1,9 @@
+{
+    "filesToWatch": "C:/Users/boris/Dropbox/GoodGame/src/main/webapp/WEB-INF/app/**",
+    "directoryToWatch": "C:/Users/boris/Dropbox/GoodGame/src/main/webapp/WEB-INF/app",
+    "projectRootPath": "C:/Users/boris/Dropbox/GoodGame",
+    "targetPath": "C:/Users/boris/Dropbox/GoodGame/target",
+    "sourceDirectory": "src/main/webapp",
+    "jsSourceDirectory": "WEB-INF/app",
+    "filteredFiles": ["**/node_modules.tar"]
+}
