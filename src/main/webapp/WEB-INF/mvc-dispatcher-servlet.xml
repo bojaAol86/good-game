@@ -19,7 +19,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:component-scan base-package="com.springapp.mvc"/>
 
-    <mvc:resources mapping="/app/**" location="/app/build/"/>
+    <mvc:resources mapping="/app/**" location="/app/bin/"/>
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
 

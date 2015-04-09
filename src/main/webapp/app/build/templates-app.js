@@ -276,7 +276,7 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "  <h1>Latest NBA scores</h1>\n" +
     "\n" +
     "  <p class=\"lead\">\n" +
-    "    Everything you need to watch the best game from last night\n" +
+    "    Find the best game from last night\n" +
     "  </p>\n" +
     "</div>\n" +
     "<div class=\"marketing\">\n" +

@@ -97,7 +97,7 @@ public class LogoFactory {
             filename = "hawks2";
         }
 
-        filename = "src/common/" + filename + ".png";
+        filename = "assets/" + filename + ".png";
         return filename;
     }
 }
