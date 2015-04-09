@@ -7,70 +7,34 @@
 </div>
 <div class="marketing">
     <div class="date-header">Today</div>
-    <div class="scoresContainer" ng-repeat="result in todayScores | orderBy:'-WasItAGoodGame'">
-        <table>
-          <tr>
-            <td>
-              <div>
-                <img class="team-logo" ng-src="{{result.HomeTeam.LogoUrl}}"/>
-              </div>
-            </td>
-            <td class="vs">VS</td>
-            <td>
-              <div>
-                <img class="team-logo" ng-src="{{result.AwayTeam.LogoUrl}}"/>
-              </div>
-            </td>
-            <td>
-              <ul ng-show="result.Score != 'unfinished'" class="creatures" id="creatures">
-                <li>
-                  <div class="click-anim">
-                    <figure ng-class="{hyper: result.WasItAGoodGame, nervous: !result.WasItAGoodGame}">
-                      <div class="eye"></div>
-                      <div class="eye"></div>
-                      <div class="mouth "></div>
-                    </figure>
-                  </div>
-                  <div class="shadow"></div>
-                </li>
-              </ul>
-              <span ng-show="result.Score == 'unfinished'" class="vs">?</span>
-            </td>
-          </tr>
-        </table>
-      </div>
+    <div  ng-repeat="result in todayScores | orderBy:'-WasItAGoodGame'">
+        <div class=" scoresContainer container" ng-class="{good:result.WasItAGoodGame, bad:!result.WasItAGoodGame,unfinished: result.Score === 'unfinished'}">
+          <div class="row row-centered vertical-align">
+            <div class="col-xs-5">
+              <img class="img-responsive team-logo center-block" ng-src="{{result.HomeTeam.LogoUrl}}"/>
+            </div>
+            <div class="col-xs-2 vs">
+                <div class="container">VS</div>
+            </div>
+            <div class="col-xs-5">
+              <img class="img-responsive team-logo center-block" ng-src="{{result.AwayTeam.LogoUrl}}"/>
+            </div>
+        </div>
+        </div>
+    </div>
     <div class="date-header">Yesterday</div>
-    <div class="scoresContainer" ng-repeat="result in yesterdayScores | orderBy:'-WasItAGoodGame'">
-    <table>
-      <tr>
-        <td>
-          <div>
-            <img class="team-logo" ng-src="{{result.HomeTeam.LogoUrl}}"/>
-          </div>
-        </td>
-        <td class="vs">VS</td>
-        <td>
-          <div>
-            <img class="team-logo" ng-src="{{result.AwayTeam.LogoUrl}}"/>
-          </div>
-        </td>
-        <td>
-          <ul class="creatures" ng-show="result.Score != 'unfinished'" id="creatures2">
-            <li>
-              <div class="click-anim">
-                <figure ng-class="{hyper: result.WasItAGoodGame, nervous: !result.WasItAGoodGame}">
-                  <div class="eye"></div>
-                  <div class="eye"></div>
-                  <div class="mouth "></div>
-                </figure>
-              </div>
-              <div class="shadow"></div>
-            </li>
-          </ul>
-          <span ng-show="result.Score == 'unfinished'" class="vs">?</span>
-        </td>
-      </tr>
-    </table>
-  </div>
-</div>
+    <div  ng-repeat="result in yesterdayScores | orderBy:'-WasItAGoodGame'">
+        <div class=" scoresContainer container" ng-class="{good:result.WasItAGoodGame, bad:!result.WasItAGoodGame}">
+            <div class="row row-centered vertical-align">
+                <div class="col-xs-5">
+                    <img class="img-responsive team-logo center-block" ng-src="{{result.HomeTeam.LogoUrl}}"/>
+                </div>
+                <div class="col-xs-2 vs">VS</div>
+                <div class="col-xs-5">
+                    <img class="img-responsive team-logo center-block" ng-src="{{result.AwayTeam.LogoUrl}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>>
 

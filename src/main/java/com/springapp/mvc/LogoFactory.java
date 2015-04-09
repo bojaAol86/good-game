@@ -10,10 +10,10 @@ public class LogoFactory {
             filename = "miami2";
         }
         else if ("cleveland".equals(teamName )) {
-            filename = "cavs2";
+            filename = "cavs";
         }
         else if ("houston".equals(teamName )) {
-            filename = "houston2";
+            filename = "houston";
         }
         else if ("dallas".equals(teamName )) {
             filename = "dallas2";
@@ -25,7 +25,7 @@ public class LogoFactory {
             filename = "golden_state";
         }
         else if ("boston".equals(teamName )) {
-            filename = "celtics2";
+            filename = "celtics";
         }
         else if ("la lakers".equals(teamName )) {
             filename = "lakers2";
@@ -64,7 +64,7 @@ public class LogoFactory {
             filename = "portland2";
         }
         else if ("milwaukee".equals(teamName )) {
-            filename = "milwaukee2";
+            filename = "milwaukee";
         }
         else if ("toronto".equals(teamName )) {
             filename = "toronto";
@@ -73,7 +73,7 @@ public class LogoFactory {
             filename = "detroit";
         }
         else if ("memphis".equals(teamName )) {
-            filename = "memphis";
+            filename = "memphis3";
         }
         else if ("brooklyn".equals(teamName )) {
             filename = "brooklyn2";
@@ -88,7 +88,7 @@ public class LogoFactory {
             filename = "san_antonio";
         }
         else if ("new york".equals(teamName )) {
-            filename = "knicks";
+            filename = "knicks2";
         }
         else if ("utah".equals(teamName )) {
             filename = "utah";
