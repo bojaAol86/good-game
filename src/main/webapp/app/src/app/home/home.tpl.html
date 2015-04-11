@@ -8,20 +8,15 @@
           <div class="row row-centered vertical-align">
             <div class="col-xs-5">
               <img class="img-responsive team-logo center-block" ng-src="{{result.HomeTeam.LogoUrl}}"/>
-                <div class="row row-centered vertical-align ">
-                    <div class="text-center span12">{{result.HomeTeam.Name}}</div>
-                </div>
             </div>
-            <div class="col-xs-2 vs">
-                <div class="container">VS</div>
-            </div>
+            <div class="col-xs-2 vs">VS</div>
             <div class="col-xs-5">
               <img class="img-responsive team-logo center-block" ng-src="{{result.AwayTeam.LogoUrl}}"/>
             </div>
         </div>
         </div>
     </div>
-    <div class ="scoresContainer container no-game" ng-show="todayScores === undefined">
+    <div class ="scoresContainer container no-game" ng-show="noGames">
         <div class="row row-centered vertical-align">
             <div class="col-xs-4">
                 <img class="img-responsive team-logo center-block" ng-src="assets/NBA.png"/>

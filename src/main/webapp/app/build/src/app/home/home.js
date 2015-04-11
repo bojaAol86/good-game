@@ -39,15 +39,20 @@ angular.module( 'ngBoilerplate.home', [
  */
 .controller( 'HomeCtrl', ["$scope", "$http", function HomeController( $scope,$http ) {
 
+        $scope.noGames = false;
       $http.get('/scores').
-          success(function (data, status, headers, config) {
-            $scope.todayScores = data.today;
-              $scope.yesterdayScores = data.yesterday;
-          }).
-          error(function (data, status, headers, config) {
-            // called asynchronously if an error occurs
-            // or server returns response with an error status.
-          });
+      success(function (data, status, headers, config) {
+        $scope.todayScores = data.today;
+          $scope.yesterdayScores = data.yesterday;
+
+          if($scope.todayScores === undefined){
+              $scope.noGames = true;
+          }
+      }).
+      error(function (data, status, headers, config) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
 }])
 
 ;

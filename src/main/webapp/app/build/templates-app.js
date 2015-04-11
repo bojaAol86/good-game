@@ -25,20 +25,15 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "          <div class=\"row row-centered vertical-align\">\n" +
     "            <div class=\"col-xs-5\">\n" +
     "              <img class=\"img-responsive team-logo center-block\" ng-src=\"{{result.HomeTeam.LogoUrl}}\"/>\n" +
-    "                <div class=\"row row-centered vertical-align \">\n" +
-    "                    <div class=\"text-center span12\">{{result.HomeTeam.Name}}</div>\n" +
-    "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"col-xs-2 vs\">\n" +
-    "                <div class=\"container\">VS</div>\n" +
-    "            </div>\n" +
+    "            <div class=\"col-xs-2 vs\">VS</div>\n" +
     "            <div class=\"col-xs-5\">\n" +
     "              <img class=\"img-responsive team-logo center-block\" ng-src=\"{{result.AwayTeam.LogoUrl}}\"/>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "    <div class =\"scoresContainer container no-game\" ng-show=\"todayScores === undefined\">\n" +
+    "    <div class =\"scoresContainer container no-game\" ng-show=\"noGames\">\n" +
     "        <div class=\"row row-centered vertical-align\">\n" +
     "            <div class=\"col-xs-4\">\n" +
     "                <img class=\"img-responsive team-logo center-block\" ng-src=\"assets/NBA.png\"/>\n" +

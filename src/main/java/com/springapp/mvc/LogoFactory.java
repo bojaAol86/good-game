@@ -43,7 +43,7 @@ public class LogoFactory {
             filename = "chicago2";
         }
         else if ("la clippers".equals(teamName )) {
-            filename = "clippers";
+            filename = "clippers2";
         }
         else if ("indiana".equals(teamName )) {
             filename = "indiana2";
