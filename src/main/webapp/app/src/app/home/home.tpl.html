@@ -1,9 +1,5 @@
 <div class="jumbotron">
-  <h1>Latest NBA scores</h1>
-
-  <p class="lead">
-    Find the best game from last night
-  </p>
+  <div class="good-header">Was it a Good Game?</div>
 </div>
 <div class="marketing">
     <div class="date-header">Today</div>
@@ -12,6 +8,9 @@
           <div class="row row-centered vertical-align">
             <div class="col-xs-5">
               <img class="img-responsive team-logo center-block" ng-src="{{result.HomeTeam.LogoUrl}}"/>
+                <div class="row row-centered vertical-align ">
+                    <div class="text-center span12">{{result.HomeTeam.Name}}</div>
+                </div>
             </div>
             <div class="col-xs-2 vs">
                 <div class="container">VS</div>
@@ -20,6 +19,14 @@
               <img class="img-responsive team-logo center-block" ng-src="{{result.AwayTeam.LogoUrl}}"/>
             </div>
         </div>
+        </div>
+    </div>
+    <div class ="scoresContainer container no-game" ng-show="todayScores === undefined">
+        <div class="row row-centered vertical-align">
+            <div class="col-xs-4">
+                <img class="img-responsive team-logo center-block" ng-src="assets/NBA.png"/>
+            </div>
+            <div class="col-xs-8">No games today</div>
         </div>
     </div>
     <div class="date-header">Yesterday</div>
@@ -36,5 +43,5 @@
             </div>
         </div>
     </div>
-</div>>
+</div>
 

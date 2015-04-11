@@ -31,7 +31,7 @@ public class LogoFactory {
             filename = "lakers2";
         }
         else if ("oklahoma city".equals(teamName )) {
-            filename = "okc";
+            filename = "okc2";
         }
         else if ("denver".equals(teamName )) {
             filename = "denver";

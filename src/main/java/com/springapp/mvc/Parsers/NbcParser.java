@@ -5,10 +5,7 @@ import com.springapp.mvc.ResultData;
 import org.jsoup.nodes.Element;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class NbcParser extends Parser {
 
@@ -23,7 +20,7 @@ public class NbcParser extends Parser {
         this.SetYesterdaysDateUrl();
     }
 
-    public Map<String,List<ResultData>> parse(){
+    public Map<String,ArrayList<ResultData>> parse(){
         return super.parse();
     }
 

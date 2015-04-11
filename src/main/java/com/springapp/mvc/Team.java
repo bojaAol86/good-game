@@ -11,4 +11,11 @@ public class Team {
     public Team(){
         Winner = false;
     }
+
+    public boolean equals(Team other) {
+
+        if(this.Name.equals(other.Name) && this.Score == other.Score)
+            return true;
+        return false;
+    }
 }

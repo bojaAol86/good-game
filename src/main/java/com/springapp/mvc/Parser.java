@@ -19,16 +19,16 @@ public abstract class Parser {
     protected String Overtime;
     protected String UserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30";
 
-    public  Map<String,List<ResultData>> parse(){
+    public  Map<String,ArrayList<ResultData>> parse(){
         try
         {
-            Map<String,List<ResultData>> resultList = new HashMap<String, List<ResultData>>() ;      
-            List<ResultData> todaysGameList = new ArrayList<ResultData>();
-            List<ResultData> yesterdayGameList = new ArrayList<ResultData>();
+            Map<String,ArrayList<ResultData>> resultList = new HashMap<String, ArrayList<ResultData>>() ;
+            ArrayList<ResultData> todaysGameList = new ArrayList<ResultData>();
+            ArrayList<ResultData> yesterdayGameList = new ArrayList<ResultData>();
             resultList.put(SiteUrl,todaysGameList);
             resultList.put(YesterdaysGamesUrl,yesterdayGameList);
 
-            for (Map.Entry<String, List<ResultData>> entry : resultList.entrySet()) {
+            for (Map.Entry<String, ArrayList<ResultData>> entry : resultList.entrySet()) {
 
                 List<ResultData> datesGamesList = entry.getValue();
                 String url = entry.getKey();
@@ -68,14 +68,17 @@ public abstract class Parser {
                 }
             }
 
-            List<ResultData> tmp1 = resultList.get(SiteUrl);
-            List<ResultData> tmp2 = resultList.get(YesterdaysGamesUrl);
+            ArrayList<ResultData> tmp1 = resultList.get(SiteUrl);
+            ArrayList<ResultData> tmp2 = resultList.get(YesterdaysGamesUrl);
 
             resultList.remove(SiteUrl);
             resultList.remove(YesterdaysGamesUrl);
 
-            resultList.put("today", tmp1);
             resultList.put("yesterday",tmp2);
+
+            if(!IsYesterdayAndTodaySame(tmp1,tmp2)){
+                resultList.put("today", tmp1);
+            }
 
             return resultList;
 
@@ -89,5 +92,20 @@ public abstract class Parser {
     public abstract boolean CalculateOvertime(Element gameElement);
     public abstract void SetYesterdaysDateUrl();
     public abstract int CheckIsGameOver(String scoreText);
+
+    private boolean IsYesterdayAndTodaySame(ArrayList<ResultData> todayResults, ArrayList<ResultData> yesterdayResults){
+
+        if(todayResults.size() != yesterdayResults.size())
+            return false;
+
+        boolean areSame = true;
+        for (int i = 0; i < todayResults.size(); i++) {
+
+            if(!todayResults.get(i).equals(yesterdayResults.get(i)))
+                areSame = false;
+        }
+
+        return areSame;
+    }
 
 }

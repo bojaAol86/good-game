@@ -26,4 +26,11 @@ public class ResultData {
             WasItAGoodGame = true;
         }
     }
+
+    public boolean equals(ResultData other) {
+
+        if(this.HomeTeam.equals(other.HomeTeam) && this.AwayTeam.equals(other.AwayTeam))
+            return true;
+        return false;
+    }
 }

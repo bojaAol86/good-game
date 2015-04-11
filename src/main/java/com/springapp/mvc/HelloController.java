@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -15,10 +16,10 @@ import java.util.Map;
 public class HelloController {
 
 	@RequestMapping(method = RequestMethod.GET)
-	public @ResponseBody Map<String,List<ResultData>> printWelcome(ModelMap model) {
+	public @ResponseBody Map<String,ArrayList<ResultData>> printWelcome(ModelMap model) {
 
 		Parser parser = new NbcParser();
-		Map<String,List<ResultData>> results = parser.parse();
+		Map<String,ArrayList<ResultData>> results = parser.parse();
 		return results;
 	}
 }

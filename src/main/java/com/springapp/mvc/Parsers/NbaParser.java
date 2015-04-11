@@ -4,6 +4,7 @@ import com.springapp.mvc.Parser;
 import com.springapp.mvc.ResultData;
 import org.jsoup.nodes.Element;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +19,7 @@ public class NbaParser extends Parser{
         super.SiteUrl = "http://stats.nba.com/scores/#!/03/20/2015";
     }
 
-    public Map<String,List<ResultData>> parse(){
+    public Map<String,ArrayList<ResultData>> parse(){
         return super.parse();
     }
 

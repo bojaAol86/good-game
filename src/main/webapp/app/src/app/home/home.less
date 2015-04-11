@@ -1,22 +1,10 @@
 .jumbotron {
-  margin: 40px 0 80px 0;
+  //text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;
+  font-size: 9vmax;
+  font-weight: 200;
+  font-family: 'Allan', Helvetica, Arial, sans-serif;
   text-align: center;
-
-  h1 {
-    margin-bottom: 20px;
-    font-size: 55px;
-    line-height: 1;
-  }
-
-  .lead {
-    font-size: 24px;
-    line-height: 1.25;
-  }
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+  background: none;
 }
 
 .marketing {
@@ -27,17 +15,10 @@
   .row:last-child {
     margin-bottom: 0;
   }
-  
-  h4 [class*=" icon-"], h4 [class^="icon-"] {
-    margin-right: 5px;
-    vertical-align: -10%;
-    font-size: 28px;
-    line-height: 1;
-  }
 }
 
 body{
-  background: cornflowerblue;
+  background: white;
 }
 
 .scoresContainer table td{
@@ -53,7 +34,7 @@ body{
 
 .scoresContainer{
   margin-bottom: 20px;
-  border: 2px solid lightblue;
+  //border: 2px solid lightblue;
   border-radius: 20px;
   padding: 10px;
   //background-color: white;
@@ -77,19 +58,38 @@ body{
   font-family: 'Josefin Slab', serif;
   font-size: 80px;
   font-weight: bold;
-  color: whitesmoke;
+  color: black;
   text-align: center;
 }
 
 .good{
-  border: 10px solid #99FF00;
-  background: #99FF00;
+  border: 10px solid rgb(87, 244, 87);
+  background: rgb(87, 244, 87);
+}
+
+.good .vs{
   color: black;
 }
 
+.no-game{
+  font-size: 4vmax;
+  color: white;
+  background:cornflowerblue;
+  font-weight: 800;
+  font-family: 'Josefin Slab', serif;
+}
+
+.no-game img{
+  margin-right: 0;
+}
+
+.good-header{
+
+}
+
 .bad{
-  border: 10px solid #CC0000;
-  background: #CC0000;
+  border: 10px solid rgb(250, 43, 43);
+  background: rgb(250, 43, 43);
 }
 
 .unfinished{
